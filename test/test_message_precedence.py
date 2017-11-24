@@ -1,6 +1,6 @@
 import unittest
 
-from lib.precedence import PrecedenceCCEB
+from netcontroller.precedence.precedence_cceb import PrecedenceCCEB
 
 
 class TestPrecedenceMethods(unittest.TestCase):

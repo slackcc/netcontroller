@@ -10,7 +10,7 @@ date: 20 Nov 2017
 
 """
 
-from lib.communicators.address import Address
+from communicators.address import Address
 
 # Inital welcome screen
 # Start net

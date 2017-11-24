@@ -32,7 +32,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/slackcc/Documents/Python Projects/netcontroller"
+set -gx VIRTUAL_ENV "/Users/slackcc/Documents/Python_Projects/netcontroller"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

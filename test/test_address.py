@@ -1,6 +1,6 @@
 import unittest
 
-from netcontroller.lib.communicators.address import Address
+from netcontroller.communicators.address import Address
 
 
 class TestAddressMethods(unittest.TestCase):

@@ -10,7 +10,7 @@ date: 20 Nov 2017
 
 """
 
-from precedence import MessagePrecedence
+from .message_precedence import MessagePrecedence
 
 
 class PrecedenceCCEB(MessagePrecedence):

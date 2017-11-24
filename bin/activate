@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/slackcc/Documents/Python Projects/netcontroller"
+VIRTUAL_ENV="/Users/slackcc/Documents/Python_Projects/netcontroller"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
