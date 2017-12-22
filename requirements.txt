@@ -1,0 +1,9 @@
+# This is an implicit value, here for clarity
+
+olefile==0.44
+pdfrw==0.4
+Pillow==4.3.0
+PyPDF2==1.26.0
+PyQt5==5.9.2
+reportlab==3.4.0
+sip==4.19.6
