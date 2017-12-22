@@ -6,6 +6,6 @@ from pony.orm import Database
 # from database.net import Net
 
 
-class Database_Config:
+class DatabaseConfig:
 
     db = Database(provider='sqlite', filename='new.db', create_db=True)

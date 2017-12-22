@@ -8,10 +8,10 @@ Date: 29 Nov 2017
 
 from datetime import datetime
 from pony.orm import Optional
-from .formal_message import Formal_Message
+from .formal_message import FormalMessage
 
 
-class ARRL_Radiogram(Formal_Message):
+class ARRL_Radiogram(FormalMessage):
     """Initialize Pony ORM model for ARRL Radiograms"""
     number = Optional(str)
     arrl_precedence = Optional(str)

@@ -12,4 +12,4 @@ from .capf105_message import CAPF105_Message
 from .ics213_message import ICS213_Message
 
 __all__ = ['Message_Transmission', 'Formal_Message', 'ARRL_Radiogram',
-           'CAPF105_Message', 'ICS213_Message']
+           'CAPF105Message', 'ICS213Message']

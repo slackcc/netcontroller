@@ -1,11 +1,11 @@
 from pony.orm import (PrimaryKey, Optional, Set, Required)
 from datetime import datetime
 from model.station import Station
-from model.config import Database_Config
+from model.config import DatabaseConfig
 from .channel import Channel
 
 
-class Net(Database_Config.db.Entity):
+class Net(DatabaseConfig.db.Entity):
     id = PrimaryKey(int, auto=True)
     channels = Set(Channel)
     net_opened = Optional(datetime)

@@ -1,5 +1,5 @@
-from model.config import Database_Config
+from model.config import DatabaseConfig
 
 
 class Dbinit:
-    Database_Config.db.generate_mapping(create_tables=True)
+    DatabaseConfig.db.generate_mapping(create_tables=True)

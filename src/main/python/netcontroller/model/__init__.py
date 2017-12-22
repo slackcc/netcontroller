@@ -6,13 +6,13 @@ Date: 29 Nov 2017
 """
 
 from .station import (Address, Station)
-from .messages import (Formal_Message, ARRL_Radiogram, ICS213_Message,
-                       CAPF105_Message, Message_Transmission)
-from .net import (Net, Log_Entry, Channel)
-from .config import Database_Config
+from .messages import (Formal_Message, ARRL_Radiogram, ICS213Message,
+                       CAPF105Message, Message_Transmission)
+from .net import (Net, LogEntry, Channel)
+from .config import DatabaseConfig
 from .dbinit import Dbinit
 
 
-__all__ = ['Database_Config', 'Address', 'ARRL_Radiogram', 'CAPF105_Message',
-           'Channel', 'ICS213_Message', 'Log_Entry', 'Formal_Message',
-           'Message_Transmission', 'Net', 'Station', 'Dbinit']
+__all__ = ['DatabaseConfig', 'Address', 'ARRLRadiogram', 'CAPF105Message',
+           'Channel', 'ICS213Message', 'LogEntry', 'FormalMessage',
+           'MessageTransmission', 'Net', 'Station', 'Dbinit']
