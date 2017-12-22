@@ -1,5 +1,8 @@
 language: python
 dist: trusty
+addons:
+  sonarcloud:
+    organization: "slackcc-github" # the key of the org you chose at step #3
 python:
   - "3.6"
   - "3.6-dev"  # 3.6 development branch
