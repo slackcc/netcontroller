@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox
-from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QLineEdit, QMessageBox
 from PyQt5.QtCore import pyqtSlot
+
 
 class App(QMainWindow):
 
@@ -22,7 +22,6 @@ class App(QMainWindow):
         self.textbox = QLineEdit(self)
         self.textbox.move(20, 20)
         self.textbox.resize(280,40)
-
 
         self.textbox2 = QLineEdit(self)
         self.textbox2.move(20, 80)
@@ -45,7 +44,6 @@ class App(QMainWindow):
         self.textbox.setText("")
         self.textbox2.setText("")
         self.textbox.setFocus()
-
 
 
 if __name__ == '__main__':

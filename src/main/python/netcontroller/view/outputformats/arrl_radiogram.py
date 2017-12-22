@@ -1,12 +1,9 @@
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.colors import (
-    black,
     blue,
-    purple,
-    white,
-    yellow
 )
+
 
 class ArrlRadiogram:
 

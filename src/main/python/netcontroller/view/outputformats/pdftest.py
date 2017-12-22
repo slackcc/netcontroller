@@ -17,7 +17,8 @@ from reportlab.lib.colors import (
     white,
     yellow
 )
-from arrl_radiogram import ArrlRadiogram
+
+from .arrl_radiogram import ArrlRadiogram
 
 # c = canvas.Canvas('foo.pdf', pagesize=landscape(letter))
 # frame1 = Frame(0.25*inch, 0.25*inch, 4*inch, 4*inch, showBoundary=1)
