@@ -1,7 +1,10 @@
 *.pyc
+.ropeproject
+pip-selfcheck.json
 *.db
 __pycache__
 bin
 lib
 include
 target
+.idea
