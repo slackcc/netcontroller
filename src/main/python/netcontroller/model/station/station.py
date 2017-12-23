@@ -1,8 +1,8 @@
 from pony.orm import (PrimaryKey, Optional, Set)
-from model.config import Database_Config
+from model.config import DatabaseConfig
 
 
-class Station(Database_Config.db.Entity):
+class Station(DatabaseConfig.db.Entity):
     id = PrimaryKey(int, auto=True)
     name = Optional(str)
     callsign = Optional(str)

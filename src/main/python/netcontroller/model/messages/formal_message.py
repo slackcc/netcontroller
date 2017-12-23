@@ -14,7 +14,7 @@ from model.net import LogEntry
 
 class FormalMessage(DatabaseConfig.db.Entity):
     """Initialize Pony ORM model for Formal Message Table"""
-    log_entry = Required(Log_Entry)
+    log_entry = Required(LogEntry)
     id = PrimaryKey(int, auto=True)
     date_time = Required(datetime)
     message_from = Required(str)

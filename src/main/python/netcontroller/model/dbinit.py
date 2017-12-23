@@ -1,4 +1,4 @@
-from model.config import DatabaseConfig
+from .config import DatabaseConfig
 
 
 class Dbinit:

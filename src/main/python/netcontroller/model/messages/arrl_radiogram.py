@@ -11,7 +11,7 @@ from pony.orm import Optional
 from .formal_message import FormalMessage
 
 
-class ARRL_Radiogram(FormalMessage):
+class ARRLRadiogram(FormalMessage):
     """Initialize Pony ORM model for ARRL Radiograms"""
     number = Optional(str)
     arrl_precedence = Optional(str)

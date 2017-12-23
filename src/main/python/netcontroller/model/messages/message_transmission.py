@@ -19,5 +19,5 @@ class MessageTransmission(DatabaseConfig.db.Entity):
     date_time = Optional(datetime)
     formal_message_received_from = Optional(FormalMessage,
                                             reverse='message_received_from')
-    formal_message_sent_to = Optional(Formal_Message,
+    formal_message_sent_to = Optional(FormalMessage,
                                       reverse='message_sent_to')
