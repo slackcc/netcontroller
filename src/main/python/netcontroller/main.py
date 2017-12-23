@@ -13,25 +13,6 @@ date: 20 Nov 2017
 from pony.orm import (db_session)
 from model import (Address, Dbinit)
 
-# Inital welcome screen
-# Start net
-#   Log checkin
-# View old nets
-# Print forms (CAP, ARRL, ICS)
-# model.db.bind(provider='sqlite', filename='new.db', create_db=True)
-# class Address(db.Entity):
-#     id = PrimaryKey(int, auto=True)
-#     street = Optional(str)
-#     city = Optional(str)
-#     state = Optional(str)
-#     zip_code = Optional(str)
-#     stations = Set(Station)
-#     telephone = Optional(str)
-#     email = Optional(str)
-#     latitude = Optional(str)
-#     longitude = Optional(str)
-# mydb = MyDB()
-# MyDB.db.generate_mapping(create_tables=True)
 
 Dbinit()
 

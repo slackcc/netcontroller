@@ -10,8 +10,6 @@ frame1 = Frame(0.25*inch, 0.25*inch, 4*inch, 4*inch, showBoundary=1)
 styles = getSampleStyleSheet()
 s = "foo bar " * 100
 story = [Paragraph(s, styles['Normal'])]
-# story_inframe = KeepInFrame(4*inch, 8*inch, story)
-# frame1.addFromList([story_inframe], c)
 frame1.addFromList([story], c)
 
 c.save()
