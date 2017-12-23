@@ -1,27 +1,11 @@
 import io
-# from reportlab.pdfgen import canvas
-# from reportlab.lib.pagesizes import letter
-from pdfrw import (PdfReader, PdfWriter)
+from pdfrw import PdfReader
 from PyPDF2 import PdfFileWriter, PdfFileReader
-from io import BytesIO
 from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter, landscape
 from reportlab.platypus import Paragraph, Frame, KeepInFrame
-from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
-from reportlab.lib.styles import ParagraphStyle
-# from reportlab.lib.enums import TA_LEFT, TA_CENTER
-from reportlab.lib.colors import (
-    black,
-    purple,
-    white,
-    yellow
-)
 
 from .arrl_radiogram import ArrlRadiogram
-
-# c = canvas.Canvas('foo.pdf', pagesize=landscape(letter))
-# frame1 = Frame(0.25*inch, 0.25*inch, 4*inch, 4*inch, showBoundary=1)
 
 
 def box_sides_in(sides_positions):
@@ -35,7 +19,7 @@ def box_sides_in(sides_positions):
             float(sides_positions[3]) / 72.0 * inch]
 
 
-def populatePdfForm(template_file, MessageClass):
+def populate_pdf_form(template_file, message_class):
     """
     Read in a PDF with form fields and apply the string contents of the
     messageDict dictionary to the cooresponding form fields.
@@ -58,9 +42,9 @@ def populatePdfForm(template_file, MessageClass):
             if 'padding_top' in key:
                 padding_top = key.get('padding_top', '')
             else:
-                padding_top = MessageClass.defaults.get('padding_top', '')
+                padding_top = message_class.defaults.get('padding_top', '')
 
-            styles = MessageClass.styles
+            styles = message_class.styles
 
             if 'align' in key:
                 align = key.get('align', '')
@@ -117,7 +101,7 @@ def write_formal_message(template_file, output_file, form_data):
     outputStream.close()
 
 
-returndata = populatePdfForm('RADIOGRAM-2011-FORM.pdf', ArrlRadiogram)
+returndata = populate_pdf_form('RADIOGRAM-2011-FORM.pdf', ArrlRadiogram)
 new_pdf = PdfFileReader(returndata)
 # read your existing PDF
 
@@ -125,9 +109,8 @@ new_pdf = PdfFileReader(returndata)
 
 existing_pdf = PdfFileReader(open("RADIOGRAM-2011-FORM.pdf", "rb"))
 output = PdfFileWriter()
-# output.addPage(existing_pdf.getPage(0))
-# page = output.getPage(0)
-# output.updatePageFormFieldValues(page, mydata)
+
+
 # add the "watermark" (which is the new pdf) on the existing page
 page = existing_pdf.getPage(0)
 page.mergePage(new_pdf.getPage(0))
