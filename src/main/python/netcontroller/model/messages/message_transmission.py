@@ -7,8 +7,8 @@ Date: 29 Nov 2017
 
 from datetime import datetime
 from pony.orm import (PrimaryKey, Required, Optional)
-from model.config import DatabaseConfig
-from model.station import Station
+from ..config import DatabaseConfig
+from ..station import Station
 from .formal_message import FormalMessage
 
 

@@ -1,3 +1,5 @@
+geopy
+pony
 # This is an implicit value, here for clarity
 
 olefile==0.44

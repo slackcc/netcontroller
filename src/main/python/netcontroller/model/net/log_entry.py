@@ -1,7 +1,7 @@
 from datetime import datetime
 from pony.orm import (PrimaryKey, Optional, Required, LongStr)
-from model.station import Station
-from model.config import DatabaseConfig
+from ..station import Station
+from ..config import DatabaseConfig
 from .net import Net
 
 

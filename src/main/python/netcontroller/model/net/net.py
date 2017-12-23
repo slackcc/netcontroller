@@ -1,7 +1,7 @@
 from pony.orm import (PrimaryKey, Optional, Set, Required)
 from datetime import datetime
-from model.station import Station
-from model.config import DatabaseConfig
+from ..station import Station
+from ..config import DatabaseConfig
 from .channel import Channel
 
 

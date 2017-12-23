@@ -1,5 +1,5 @@
 from pony.orm import (PrimaryKey, Optional, Set)
-from model.config import DatabaseConfig
+from ..config import DatabaseConfig
 
 
 class Station(DatabaseConfig.db.Entity):

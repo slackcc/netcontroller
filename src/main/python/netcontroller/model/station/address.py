@@ -1,7 +1,7 @@
 from pony.orm import (PrimaryKey, Optional, Set)
 from geopy.geocoders import Nominatim  # Import GeoCoder for lat/long
 from geopy.exc import GeocoderServiceError
-from model.config import DatabaseConfig
+from ..config import DatabaseConfig
 from .station import Station
 
 
