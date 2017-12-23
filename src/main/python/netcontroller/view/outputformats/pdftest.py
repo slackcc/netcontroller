@@ -32,7 +32,7 @@ def populate_pdf_form(template_file, message_class):
         for field in page.Annots:
             label = field.T
 
-            key = MessageClass.data_map.get(label[1:-1], '')
+            key = message_class.data_map.get(label[1:-1], '')
 
             if 'value' in key:
                 value = str(key.get('value', 'Test'))
@@ -45,9 +45,6 @@ def populate_pdf_form(template_file, message_class):
                 padding_top = message_class.defaults.get('padding_top', '')
 
             styles = message_class.styles
-
-            if 'align' in key:
-                align = key.get('align', '')
 
 
             box_sides = box_sides_in(field.Rect)
@@ -96,17 +93,15 @@ def write_formal_message(template_file, output_file, form_data):
     output.updatePageFormFieldValues(page, form_data)
 
     # Write the output to a file
-    outputStream = open(output_file, "wb")
-    output.write(outputStream)
+    output_stream = open(output_file, "wb")
+    output.write(output_stream)
     outputStream.close()
 
 
 returndata = populate_pdf_form('RADIOGRAM-2011-FORM.pdf', ArrlRadiogram)
 new_pdf = PdfFileReader(returndata)
+
 # read your existing PDF
-
-# write_formal_message("RADIOGRAM-2011-FORM.pdf", "outfile.pdf", mydata)
-
 existing_pdf = PdfFileReader(open("RADIOGRAM-2011-FORM.pdf", "rb"))
 output = PdfFileWriter()
 

@@ -14,7 +14,7 @@ class App(QMainWindow):
         self.height = 240
         self.initUI()
 
-    def initUI(self):
+    def initUI(self):  #NOSONAR
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
@@ -37,10 +37,11 @@ class App(QMainWindow):
 
     @pyqtSlot()
     def on_click(self):
-        textboxValue = self.textbox.text()
-        textboxValue2 = self.textbox2.text()
+        textbox_value = self.textbox.text()
+        textbox_value_2 = self.textbox2.text()
 
-        QMessageBox.question(self, 'Message - pythonspot.com', "You typed: " + textboxValue + " " + textboxValue2, QMessageBox.Ok, QMessageBox.Ok)
+        QMessageBox.question(self, 'Message - pythonspot.com', "You typed: " + textbox_value + " " + textbox_value_2,
+                             QMessageBox.Ok, QMessageBox.Ok)
         self.textbox.setText("")
         self.textbox2.setText("")
         self.textbox.setFocus()
