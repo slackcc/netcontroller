@@ -19,8 +19,8 @@ Dbinit()
 
 @db_session
 def create_entities():
-    smb = Address(street="55 Old Billerica Rd", city="Bedford",
-                  state="MA", zip_code="01730")
+    smb = Address(street="2 Main Street", city="Greenfield",
+                  state="MA", zip_code="01301")
     return smb
 
 
