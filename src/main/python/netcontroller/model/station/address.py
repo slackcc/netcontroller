@@ -1,11 +1,11 @@
 from pony.orm import (PrimaryKey, Optional, Set)
 from geopy.geocoders import Nominatim  # Import GeoCoder for lat/long
 from geopy.exc import GeocoderServiceError
-from model.config import Database_Config
+from ..config import DatabaseConfig
 from .station import Station
 
 
-class Address(Database_Config.db.Entity):
+class Address(DatabaseConfig.db.Entity):
     """
     Model for storing address information in the DB
     """
@@ -61,7 +61,7 @@ class Address(Database_Config.db.Entity):
                 # @db_session
                 self.latitude = location.latitude
                 self.longitude = location.longitude
-                Database_Config.db.commit()
+                DatabaseConfig.db.commit()
                 return True
 
             except GeocoderServiceError:

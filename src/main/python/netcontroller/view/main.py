@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox
-from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QLineEdit, QMessageBox
 from PyQt5.QtCore import pyqtSlot
+
 
 class App(QMainWindow):
 
@@ -14,7 +14,7 @@ class App(QMainWindow):
         self.height = 240
         self.initUI()
 
-    def initUI(self):
+    def initUI(self):  #NOSONAR
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
@@ -22,7 +22,6 @@ class App(QMainWindow):
         self.textbox = QLineEdit(self)
         self.textbox.move(20, 20)
         self.textbox.resize(280,40)
-
 
         self.textbox2 = QLineEdit(self)
         self.textbox2.move(20, 80)
@@ -38,14 +37,14 @@ class App(QMainWindow):
 
     @pyqtSlot()
     def on_click(self):
-        textboxValue = self.textbox.text()
-        textboxValue2 = self.textbox2.text()
+        textbox_value = self.textbox.text()
+        textbox_value_2 = self.textbox2.text()
 
-        QMessageBox.question(self, 'Message - pythonspot.com', "You typed: " + textboxValue + " " + textboxValue2, QMessageBox.Ok, QMessageBox.Ok)
+        QMessageBox.question(self, 'Message - pythonspot.com', "You typed: " + textbox_value + " " + textbox_value_2,
+                             QMessageBox.Ok, QMessageBox.Ok)
         self.textbox.setText("")
         self.textbox2.setText("")
         self.textbox.setFocus()
-
 
 
 if __name__ == '__main__':

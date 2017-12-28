@@ -1,8 +1,8 @@
 from pony.orm import (PrimaryKey, Optional, Set)
-from model.config import Database_Config
+from ..config import DatabaseConfig
 
 
-class Channel(Database_Config.db.Entity):
+class Channel(DatabaseConfig.db.Entity):
     id = PrimaryKey(int, auto=True)
     name = Optional(str)
     frequency = Optional(str)

@@ -7,17 +7,17 @@ Date: 29 Nov 2017
 
 from datetime import datetime
 from pony.orm import (PrimaryKey, Required, Optional)
-from model.config import Database_Config
-from model.station import Station
-from .formal_message import Formal_Message
+from ..config import DatabaseConfig
+from ..station import Station
+from .formal_message import FormalMessage
 
 
-class Message_Transmission(Database_Config.db.Entity):
+class MessageTransmission(DatabaseConfig.db.Entity):
     """Initialize Pony ORM for message transmission table"""
     id = PrimaryKey(int, auto=True)
     station = Required(Station)
     date_time = Optional(datetime)
-    formal_message_received_from = Optional(Formal_Message,
+    formal_message_received_from = Optional(FormalMessage,
                                             reverse='message_received_from')
-    formal_message_sent_to = Optional(Formal_Message,
+    formal_message_sent_to = Optional(FormalMessage,
                                       reverse='message_sent_to')

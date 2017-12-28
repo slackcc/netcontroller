@@ -4,6 +4,6 @@ Define the config module for NetController
 Author: C.C. Slack
 Date: 29 Nov 2017
 """
-from .database_config import Database_Config
+from .database_config import DatabaseConfig
 
-__all__ = ['Database_Config']
+__all__ = ['DatabaseConfig']

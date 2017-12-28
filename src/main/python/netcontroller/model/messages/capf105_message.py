@@ -7,10 +7,10 @@ Author: C.C. Slack
 Date: 29 Nov 2017
 """
 from pony.orm import (Optional, Required, LongStr)
-from .formal_message import Formal_Message
+from .formal_message import FormalMessage
 
 
-class CAPF105_Message(Formal_Message):
+class CAPF105Message(FormalMessage):
     """Initialize Pony ORM model for CAPF105 Messages"""
     msg_number_incoming = Optional(str)
     msg_number_outgoing = Optional(str)

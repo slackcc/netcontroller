@@ -8,13 +8,13 @@ Date: 29 Nov 2017
 
 from datetime import datetime
 from pony.orm import (PrimaryKey, Optional, Required, LongStr)
-from model.config import Database_Config
-from model.net import Log_Entry
+from ..config import DatabaseConfig
+from ..net import LogEntry
 
 
-class Formal_Message(Database_Config.db.Entity):
+class FormalMessage(DatabaseConfig.db.Entity):
     """Initialize Pony ORM model for Formal Message Table"""
-    log_entry = Required(Log_Entry)
+    log_entry = Required(LogEntry)
     id = PrimaryKey(int, auto=True)
     date_time = Required(datetime)
     message_from = Required(str)

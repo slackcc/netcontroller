@@ -7,10 +7,10 @@ Date: 29 Nov 2017
 
 from datetime import datetime
 from pony.orm import (Optional, LongStr)
-from .formal_message import Formal_Message
+from .formal_message import FormalMessage
 
 
-class ICS213_Message(Formal_Message):
+class ICS213Message(FormalMessage):
     """Initialize Pony ORM for ICS213 Message table"""
     to_position = Optional(str)
     from_position = Optional(str)

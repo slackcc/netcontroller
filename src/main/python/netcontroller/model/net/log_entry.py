@@ -1,11 +1,11 @@
 from datetime import datetime
 from pony.orm import (PrimaryKey, Optional, Required, LongStr)
-from model.station import Station
-from model.config import Database_Config
+from ..station import Station
+from ..config import DatabaseConfig
 from .net import Net
 
 
-class Log_Entry(Database_Config.db.Entity):
+class LogEntry(DatabaseConfig.db.Entity):
     id = PrimaryKey(int, auto=True)
     net = Required(Net)
     station = Required(Station)
