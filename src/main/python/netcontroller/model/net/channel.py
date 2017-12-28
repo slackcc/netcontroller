@@ -6,4 +6,5 @@ class Channel(Database_Config.db.Entity):
     id = PrimaryKey(int, auto=True)
     name = Optional(str)
     frequency = Optional(str)
+
     nets = Set('Net')
